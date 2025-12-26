@@ -1,0 +1,22 @@
+{
+  "name": "excelYoutubers",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^25.0.3",
+    "dotenv": "^17.2.3",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  },
+  "type": "commonjs",
+  
+    "scripts": {
+      "build": "tsc src/app.ts --outDir dist --esModuleInterop",
+      "start": "npm run build && node dist/app.js",
+      "dev": "tsc src/app.ts --outDir dist --esModuleInterop --watch"
+    }
+  
+}
