@@ -10,4 +10,6 @@ export default interface Channel {
     TTKSeguidores: string;
     InstaSeguidores: string;
     InstaUrl: string;
+    customUrl1: string;
+    customUrl2: string;
 }

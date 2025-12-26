@@ -1,9 +1,8 @@
 import { getYtData } from "./scraper/collector";
-import { loadRows } from "./scraper/xlsxLoader";
+import buildXlsx from "./scraper/outputter";
 
 async function run() {
-    const rows = loadRows();
-    console.log(rows[0]);
+    await buildXlsx()
 }
 
 run();

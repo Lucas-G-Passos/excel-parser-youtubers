@@ -30,7 +30,9 @@ export function loadRows(): Channel[] {
         TTKUrl: row["URL Tiktok"] || "",
         TTKSeguidores: row["Seguidoes "] || "",
         InstaSeguidores: row["__EMPTY_1"] || "",
-        InstaUrl: row["URL _1"] || ""
+        InstaUrl: row["URL _1"] || "",
+        customUrl1: "",
+        customUrl2:""
     }));
 
     return channels;
