@@ -3,7 +3,7 @@ import Channel from "../types/channel";
 const XLSX = require("xlsx") as typeof import("xlsx")
 
 export function loadRows(): Channel[] {
-    const file = XLSX.readFile("/home/lucas/Documents/unfy/excelYoutubers/input.xlsx");
+    const file = XLSX.readFile("./input.xlsx");
 
     const screenName = file.SheetNames[0];
     if (!screenName) {
@@ -25,11 +25,11 @@ export function loadRows(): Channel[] {
         vanity_name: row["vanity_name"] || "",
         channel_link: row["channel_link"] || "",
         seguidores: parseInt(row["Seguidores"] || row["seguidores"] || "0") || 0,
-        YTUrl: row["URL "] || "", // Note the space after URL
-        YTSeguidores: row["Seguidores "] || "", // Note the space
+        YTUrl: row["URL "] || "",
+        YTSeguidores: row["Seguidores "] || "",
         TTKUrl: row["URL Tiktok"] || "",
-        TTKSeguidores: row["Seguidoes "] || "", // Note the typo in Excel
-        InstaSeguidores: row["__EMPTY_1"] || "", // You'll need to check which __EMPTY is Instagram
+        TTKSeguidores: row["Seguidoes "] || "",
+        InstaSeguidores: row["__EMPTY_1"] || "",
         InstaUrl: row["URL _1"] || ""
     }));
 
